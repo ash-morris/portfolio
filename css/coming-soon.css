@@ -1,0 +1,101 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* End reset */
+
+:root {
+  --off-white: rgba(255, 255, 255, 0.9);
+  --subtle-grey: rgba(255, 255, 255, 0.4);
+}
+
+body {
+  background: #000;
+  font-family: system-ui, sans-serif;
+}
+
+.wrapper-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-inline: 1.5rem;
+}
+
+h1,
+a {
+  color: var(--off-white);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 2.75rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: underline;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: fit-content;
+}
+
+a:hover {
+  background: var(--off-white);
+  color: #000;
+}
+
+.intro-text {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 48rem;
+  border-block-end: 1px solid var(--subtle-grey);
+  padding-block-end: 3rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 680px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  a {
+    border: 1px solid var(--off-white);
+    border-radius: 30px;
+    padding: 1rem 3rem;
+    text-decoration: none;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+  }
+}
